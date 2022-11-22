@@ -9,11 +9,9 @@ public class Employee extends Person {
 
 	@Override
 	public String toString() {
-		return "Employee [getName()=" + getName() + ", getPhoneNumber()=" + getPhoneNumber() + ", getEmailId()="
-				+ getEmailId() + ", getAddr()=" + getAddr() + ", getClass()=" + getClass() + ", hashCode()="
-				+ hashCode() + ", toString()=" + super.toString() + "]";
+		return "Employee [" + (getName() != null ? "getName()=" + getName() + ", " : "")
+				+ (getPhoneNumber() != null ? "getPhoneNumber()=" + getPhoneNumber() + ", " : "")
+				+ (getEmailId() != null ? "getEmailId()=" + getEmailId() + ", " : "")
+				+ (getAddr() != null ? "getAddr()=" + getAddr() : "") + "]";
 	}
-
-	
-	
 }

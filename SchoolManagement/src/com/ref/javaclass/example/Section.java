@@ -5,6 +5,13 @@ import java.util.List;
 
 public class Section {
 
+	@Override
+	public String toString() {
+		return "Section [" + (name != null ? "name=" + name + ", " : "") + (std != null ? "std=" + std + ", " : "")
+				+ (students != null ? "students=" + students + ", " : "")
+				+ (subjects != null ? "subjects=" + subjects : "") + "]";
+	}
+
 	private String name;
 
 	private Standard std;
@@ -13,8 +20,10 @@ public class Section {
 	
 	private List<Subject> subjects = new ArrayList();
 
-	public Section() {
-		// TODO Auto-generated constructor stub
+	public Section(String nameParam, Standard stdParam) {
+		this.name = nameParam;
+		this.std = stdParam;
+		
 	}
 
 	/**

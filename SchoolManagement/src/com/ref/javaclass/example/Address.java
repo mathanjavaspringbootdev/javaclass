@@ -26,14 +26,14 @@ public class Address {
 	public String getCountry() {
 		return country;
 	}
-	@Override
-	public String toString() {
-		return "Address [street=" + street + ", city=" + city + ", country=" + country + ", getStreet()=" + getStreet()
-				+ ", getCity()=" + getCity() + ", getCountry()=" + getCountry() + ", getClass()=" + getClass()
-				+ ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
-	}
 	public void setCountry(String country) {
 		this.country = country;
+	}
+
+	@Override
+	public String toString() {
+		return "Address [" + (street != null ? "street=" + street + ", " : "")
+				+ (city != null ? "city=" + city + ", " : "") + (country != null ? "country=" + country : "") + "]";
 	}
 	
 	

@@ -23,10 +23,17 @@ public class Student extends Person {
 	 */
 	public void setSection(Section section) {
 		this.section = section;
+		this.section.getStudents().add(this);
 	}
 
 	public void study() {
 		System.out.println(this.getName() + " is Studying " );
+	}
+
+	@Override
+	public String toString() {
+		return "Student [" + (studentNumber != null ? "studentNumber=" + studentNumber + ", " : "")
+				+ (section != null ? "section=" + section.getName() : "") + "]";
 	}
 
 }
