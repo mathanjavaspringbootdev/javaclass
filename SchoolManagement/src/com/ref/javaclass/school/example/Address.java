@@ -1,11 +1,11 @@
-package com.ref.javaclass.example;
+package com.ref.javaclass.school.example;
 
 public class Address {
 	private String street;
 	private String city;
 	private String country;
 	
-	Address(String streetParam, String cityParam, String countryParam) {
+	public Address(String streetParam, String cityParam, String countryParam) {
 		this.street = streetParam;
 		this.city = cityParam;
 		this.country = countryParam;

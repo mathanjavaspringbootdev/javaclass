@@ -1,6 +1,7 @@
-package com.ref.javaclass.example;
+package com.ref.javaclass.school.example;
 
 import java.util.Scanner;
+
 
 public class SchoolManagementApp {
 

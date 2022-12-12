@@ -1,7 +1,8 @@
-package com.ref.javaclass.example;
+package com.ref.javaclass.school.example;
 
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class Section {
 
@@ -16,9 +17,9 @@ public class Section {
 
 	private Standard std;
 
-	private List<Student> students = new ArrayList();
+	private List<Student> students = new ArrayList<>();
 	
-	private List<Subject> subjects = new ArrayList();
+	private List<Subject> subjects = new ArrayList<>();
 
 	public Section(String nameParam, Standard stdParam) {
 		this.name = nameParam;

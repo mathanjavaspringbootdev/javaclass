@@ -1,4 +1,4 @@
-package com.ref.javaclass.example;
+package com.ref.javaclass.school.example;
 
 public class School {
 	

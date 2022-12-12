@@ -1,4 +1,4 @@
-package com.ref.javaclass.example;
+package com.ref.javaclass.school.example;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +29,7 @@ public class Subject {
 
 	}
 
-	private List<Section> sections = new ArrayList();
+	private List<Section> sections = new ArrayList<>();
 
 	public Subject() {
 		// TODO Auto-generated constructor stub

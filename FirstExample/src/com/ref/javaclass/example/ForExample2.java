@@ -1,7 +1,17 @@
 package com.ref.javaclass.example;
 
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
+
+import com.ref.javaclass.school.example.Address;
+import com.ref.javaclass.school.example.Employee;
+import com.ref.javaclass.school.example.Person;
+import com.ref.javaclass.school.example.Student;
 
 public class ForExample2 {
 
@@ -13,6 +23,16 @@ public class ForExample2 {
 		Scanner scr = new Scanner(System.in);
 		System.out.println("Enter the number to print?");
 		int limit = scr.nextInt();
+		List persons = new ArrayList();
+		persons.add(new Person("P1", 123L, "abcd@abcd.com"));
+		persons.add(new Student("S1", 123L, "s1@abcd.com", 12345));
+		persons.add(new Employee("S1", 123L, "s1@abcd.com"));
+		persons.add(null);
+		System.out.println(persons.size());
+		Map<String, String> mapExp = new HashMap();
+		
+		
+		
 		/*
 		 * 
 		 * *

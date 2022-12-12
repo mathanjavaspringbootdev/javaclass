@@ -1,20 +1,20 @@
 /**
  * 
  */
-package com.ref.javaclass.example;
+package com.ref.javaclass.school.example;
 
 /**
  * @author Admin
  *
  */
-public class OtherEmp extends Employee {
+public class TeachingEmp extends Employee {
 
 	/**
 	 * @param nameParam
 	 * @param phoneNumberParam
 	 * @param emailIdParam
 	 */
-	public OtherEmp(String nameParam, Long phoneNumberParam, String emailIdParam) {
+	public TeachingEmp(String nameParam, Long phoneNumberParam, String emailIdParam) {
 		super(nameParam, phoneNumberParam, emailIdParam);
 		// TODO Auto-generated constructor stub
 	}

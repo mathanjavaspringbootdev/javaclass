@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.ref.javaclass.example;
+package com.ref.javaclass.school.example;
 
 /**
  * @author Admin
