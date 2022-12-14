@@ -23,11 +23,14 @@ public class Calculator {
 				j = scr.nextInt();
 				checkValueRange(j);
 				isValidInput = true;
-			} catch (InputMismatchException e) {
+			} 
+			catch (InputMismatchException e) {
 				String input = scr.next();
 				System.out.println("Issue in getting input!!!!: Reason: " + input + " is a wrong format");
 			} catch (RefException e) {
 				System.out.println("Issue in getting input!!!!: Reason: " +  e.getMessage());
+			}  catch(Exception e) {
+				
 			}
 		} while (!isValidInput);
 		

@@ -1,6 +1,5 @@
 package com.ref.javaclass.example;
 
-import java.io.InputStream;
 import java.util.Scanner;
 
 public class FindLarge {
