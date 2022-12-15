@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.ref.javaclass.example.generic;
+package com.ref.javaclass.example.thread;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -16,6 +16,8 @@ public class CalculatorApp {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		Thread.currentThread().setName("!Calculator Application Thread!");
+		System.out.println("This Class Running in the Thread:" + Thread.currentThread().getName());
 		SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");// dd/MM/yyyy
 		Date now = new Date();
 		System.out.println(sdfDate.format(now));
@@ -25,16 +27,18 @@ public class CalculatorApp {
 		int d = 11;
 		System.out.println(str1 + str2 + (s + d));
 		// TODO Auto-generated method stub
-		Calculator<Integer> calc = new Calculator<>();
 		now = new Date();
 		System.out.println(sdfDate.format(now));
-		calc.add(1, 2);
+		Calculator<Integer> calc = new Calculator<>("add", 1, 2);
+		Thread t1 = new Thread(calc);
+		t1.start();
 		now = new Date();
 		System.out.println(sdfDate.format(now));
-		Calculator<Double> calc2 = new Calculator<>();
 		now = new Date();
 		System.out.println(sdfDate.format(now));
-		calc2.add(1.0, 2.0);
+		Calculator<Double> calc2 = new Calculator<>("add",1.0, 2.0);
+		Thread t2 = new Thread(calc2);
+		t2.start();
 		now = new Date();
 		System.out.println(sdfDate.format(now));
 //		calc.subraction(2,1);

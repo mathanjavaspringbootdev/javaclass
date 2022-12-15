@@ -1,10 +1,31 @@
-package com.ref.javaclass.example.generic;
+package com.ref.javaclass.example.thread;
 
 /**
  * @author Admin
  *
  */
-public class Calculator<T extends Number> {
+public class Calculator<T extends Number> implements Runnable {
+
+	String operation;
+	T a;
+	T b;
+
+	public Calculator(String operation, T a, T b) {
+		this.operation = operation;
+		this.a = a;
+		this.b = b;
+	}
+
+	@Override
+	public void run() {
+		switch (operation) {
+		case "add":
+			this.add(a, b);
+			break;
+		default:
+			System.out.println("wrong Input");
+		}
+	}
 
 	public void add(T a, T b) {
 		try {

@@ -1,10 +1,28 @@
-package com.ref.javaclass.example.generic;
+package com.ref.javaclass.example.thread;
 
 /**
  * @author Admin
  *
  */
-public class Calculator<T extends Number> {
+public class CalculatorThread<T extends Number> extends Thread {
+	
+	String operation;
+	T a;
+	T b;
+	
+	public CalculatorThread(String operation, T a, T b) {
+		this.operation = operation;
+		this.a = a;
+		this.b = b;
+	}
+	
+	@Override
+		public void run() {
+			switch(operation) {
+			case "add" : this.add(a, b);
+			default : System.out.println("wrong Input");
+			}
+		}
 
 	public void add(T a, T b) {
 		try {
@@ -73,5 +91,6 @@ public class Calculator<T extends Number> {
 			System.out.println("Finish of divide method!");
 		}
 	}
+
 
 }
