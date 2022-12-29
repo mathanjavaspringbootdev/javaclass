@@ -5,6 +5,7 @@ package com.ref.javaclass.example.thread;
  *
  */
 public class Calculator<T extends Number> implements Runnable {
+	public static int count = 0;
 
 	String operation;
 	T a;
@@ -18,6 +19,7 @@ public class Calculator<T extends Number> implements Runnable {
 
 	@Override
 	public void run() {
+		count++;
 		switch (operation) {
 		case "add":
 			this.add(a, b);

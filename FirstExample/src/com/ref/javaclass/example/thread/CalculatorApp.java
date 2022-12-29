@@ -11,6 +11,8 @@ import java.util.Date;
  *
  */
 public class CalculatorApp {
+	
+	
 
 	/**
 	 * @param args
@@ -46,6 +48,17 @@ public class CalculatorApp {
 //		calc.divide(5,2);
 //		calc.reminder(5,2);
 //		calc.add(1.5f, 2.5f);
+		try {
+			System.out.println("t1.isAlive()" + t1.isAlive());
+			t1.join();
+			t2.join();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("count>>>>" + Calculator.count);
+		System.out.println("t1.isAlive()" + t1.isAlive());
+		System.out.println("End Of Program");
 	}
 
 }

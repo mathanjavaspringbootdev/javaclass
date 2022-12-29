@@ -6,6 +6,9 @@ package com.ref.javaclass.example.thread;
  */
 public class CalculatorThread<T extends Number> extends Thread {
 	
+	
+	public static int count = 0;
+	
 	String operation;
 	T a;
 	T b;
@@ -18,6 +21,7 @@ public class CalculatorThread<T extends Number> extends Thread {
 	
 	@Override
 		public void run() {
+			count++;
 			switch(operation) {
 			case "add" : this.add(a, b);
 			default : System.out.println("wrong Input");
