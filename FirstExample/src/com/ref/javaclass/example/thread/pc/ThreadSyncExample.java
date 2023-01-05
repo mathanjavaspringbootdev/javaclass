@@ -17,7 +17,10 @@ public class ThreadSyncExample {
 	public static void main(String[] args) {
 		CycleStore obj = new CycleStore();
 		Thread t1 = new ProducerThread(obj);
+		t1.setName("ProducerThread");
 		Thread t2 = new ConsumeThread(obj);
+		t2.setName("ConsumeThread");
+
 		t1.start();
 		t2.start();
 		try {
