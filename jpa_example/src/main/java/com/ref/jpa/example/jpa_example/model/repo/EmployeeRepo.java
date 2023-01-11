@@ -7,5 +7,6 @@ import com.ref.jpa.example.jpa_example.model.Employee;
 
 @Repository
 public interface EmployeeRepo extends JpaRepository<Employee, Integer>{
+
 	
 }

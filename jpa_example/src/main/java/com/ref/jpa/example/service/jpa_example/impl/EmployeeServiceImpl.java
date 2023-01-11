@@ -1,6 +1,8 @@
 package com.ref.jpa.example.service.jpa_example.impl;
 
+import java.util.Iterator;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -44,8 +46,9 @@ public class EmployeeServiceImpl  implements EmployeeService{
 
 	@Override
 	public Employee fetchEmployee(Integer id) {
-		// TODO Auto-generated method stub
-		return empRepo.getById(id);
+		List<Employee> empList = empRepo.findAll();
+		Optional<Employee> emp = empList.stream().filter(e -> e.getId() == id).findFirst();
+		return emp.get();
 	}
 
 }
